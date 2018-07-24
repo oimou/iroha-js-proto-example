@@ -9,7 +9,6 @@ const date = Date.now();
 
 let accountRequest = new GetAccount();
 accountRequest.setAccountId("admin@test");
-console.log(accountRequest);
 
 let meta = new QueryPayloadMeta();
 meta.setCreatorAccountId("admin@test")
@@ -31,8 +30,8 @@ var adminPub =
 var sign = ed25519.sign(Buffer.from(payload.serializeBinary()), Buffer.from(adminPub, 'hex'), Buffer.from(adminPriv, 'hex'))
 
 var s = new Signature()
-s.setPubkey(Uint8Array.from(Buffer.from(adminPub, 'hex')))
-s.setSignature(Uint8Array.from(sign))
+s.setPubkey(Buffer.from(adminPub, 'hex'))
+s.setSignature(sign)
 
 query.setSignature(s)
 
@@ -41,5 +40,5 @@ const queryClient = new QueryServiceClient(
 )
 
 queryClient.find(query, (err, response) => {
-  console.log(response)
+  console.log(JSON.stringify(response))
 })

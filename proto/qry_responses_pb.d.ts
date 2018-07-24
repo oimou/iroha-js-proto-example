@@ -1,8 +1,9 @@
 // package: iroha.protocol
-// file: responses.proto
+// file: qry_responses.proto
 
 import * as jspb from "google-protobuf";
 import * as block_pb from "./block_pb";
+import * as transaction_pb from "./transaction_pb";
 import * as primitive_pb from "./primitive_pb";
 
 export class Asset extends jspb.Message {
@@ -96,10 +97,8 @@ export class AccountAsset extends jspb.Message {
   getAccountId(): string;
   setAccountId(value: string): void;
 
-  hasBalance(): boolean;
-  clearBalance(): void;
-  getBalance(): primitive_pb.Amount | undefined;
-  setBalance(value?: primitive_pb.Amount): void;
+  getBalance(): string;
+  setBalance(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AccountAsset.AsObject;
@@ -115,7 +114,7 @@ export namespace AccountAsset {
   export type AsObject = {
     assetId: string,
     accountId: string,
-    balance?: primitive_pb.Amount.AsObject,
+    balance: string,
   }
 }
 
@@ -317,9 +316,9 @@ export namespace SignatoriesResponse {
 
 export class TransactionsResponse extends jspb.Message {
   clearTransactionsList(): void;
-  getTransactionsList(): Array<block_pb.Transaction>;
-  setTransactionsList(value: Array<block_pb.Transaction>): void;
-  addTransactions(value?: block_pb.Transaction, index?: number): block_pb.Transaction;
+  getTransactionsList(): Array<transaction_pb.Transaction>;
+  setTransactionsList(value: Array<transaction_pb.Transaction>): void;
+  addTransactions(value?: transaction_pb.Transaction, index?: number): transaction_pb.Transaction;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TransactionsResponse.AsObject;
@@ -333,7 +332,7 @@ export class TransactionsResponse extends jspb.Message {
 
 export namespace TransactionsResponse {
   export type AsObject = {
-    transactionsList: Array<block_pb.Transaction.AsObject>,
+    transactionsList: Array<transaction_pb.Transaction.AsObject>,
   }
 }
 

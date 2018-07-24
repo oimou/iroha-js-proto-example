@@ -133,9 +133,24 @@ export namespace GetAccountAssets {
 }
 
 export class GetAccountDetail extends jspb.Message {
+  hasAccountId(): boolean;
+  clearAccountId(): void;
   getAccountId(): string;
   setAccountId(value: string): void;
 
+  hasKey(): boolean;
+  clearKey(): void;
+  getKey(): string;
+  setKey(value: string): void;
+
+  hasWriter(): boolean;
+  clearWriter(): void;
+  getWriter(): string;
+  setWriter(value: string): void;
+
+  getOpt_account_idCase(): GetAccountDetail.Opt_account_idCase;
+  getOpt_keyCase(): GetAccountDetail.Opt_keyCase;
+  getOpt_writerCase(): GetAccountDetail.Opt_writerCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAccountDetail.AsObject;
   static toObject(includeInstance: boolean, msg: GetAccountDetail): GetAccountDetail.AsObject;
@@ -149,6 +164,23 @@ export class GetAccountDetail extends jspb.Message {
 export namespace GetAccountDetail {
   export type AsObject = {
     accountId: string,
+    key: string,
+    writer: string,
+  }
+
+  export enum Opt_account_idCase {
+    OPT_ACCOUNT_ID_NOT_SET = 0,
+    ACCOUNT_ID = 1,
+  }
+
+  export enum Opt_keyCase {
+    OPT_KEY_NOT_SET = 0,
+    KEY = 2,
+  }
+
+  export enum Opt_writerCase {
+    OPT_WRITER_NOT_SET = 0,
+    WRITER = 3,
   }
 }
 
@@ -205,6 +237,22 @@ export class GetRolePermissions extends jspb.Message {
 export namespace GetRolePermissions {
   export type AsObject = {
     roleId: string,
+  }
+}
+
+export class GetPendingTransactions extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetPendingTransactions.AsObject;
+  static toObject(includeInstance: boolean, msg: GetPendingTransactions): GetPendingTransactions.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetPendingTransactions, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetPendingTransactions;
+  static deserializeBinaryFromReader(message: GetPendingTransactions, reader: jspb.BinaryReader): GetPendingTransactions;
+}
+
+export namespace GetPendingTransactions {
+  export type AsObject = {
   }
 }
 
@@ -319,6 +367,11 @@ export namespace Query {
     getGetAssetInfo(): GetAssetInfo | undefined;
     setGetAssetInfo(value?: GetAssetInfo): void;
 
+    hasGetPendingTransactions(): boolean;
+    clearGetPendingTransactions(): void;
+    getGetPendingTransactions(): GetPendingTransactions | undefined;
+    setGetPendingTransactions(value?: GetPendingTransactions): void;
+
     getQueryCase(): Payload.QueryCase;
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Payload.AsObject;
@@ -343,6 +396,7 @@ export namespace Query {
       getRoles?: GetRoles.AsObject,
       getRolePermissions?: GetRolePermissions.AsObject,
       getAssetInfo?: GetAssetInfo.AsObject,
+      getPendingTransactions?: GetPendingTransactions.AsObject,
     }
 
     export enum QueryCase {
@@ -357,6 +411,7 @@ export namespace Query {
       GET_ROLES = 10,
       GET_ROLE_PERMISSIONS = 11,
       GET_ASSET_INFO = 12,
+      GET_PENDING_TRANSACTIONS = 13,
     }
   }
 }

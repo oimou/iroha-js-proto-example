@@ -5,16 +5,11 @@ import * as jspb from "google-protobuf";
 import * as primitive_pb from "./primitive_pb";
 
 export class AddAssetQuantity extends jspb.Message {
-  getAccountId(): string;
-  setAccountId(value: string): void;
-
   getAssetId(): string;
   setAssetId(value: string): void;
 
-  hasAmount(): boolean;
-  clearAmount(): void;
-  getAmount(): primitive_pb.Amount | undefined;
-  setAmount(value?: primitive_pb.Amount): void;
+  getAmount(): string;
+  setAmount(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddAssetQuantity.AsObject;
@@ -28,9 +23,8 @@ export class AddAssetQuantity extends jspb.Message {
 
 export namespace AddAssetQuantity {
   export type AsObject = {
-    accountId: string,
     assetId: string,
-    amount?: primitive_pb.Amount.AsObject,
+    amount: string,
   }
 }
 
@@ -255,10 +249,8 @@ export class TransferAsset extends jspb.Message {
   getDescription(): string;
   setDescription(value: string): void;
 
-  hasAmount(): boolean;
-  clearAmount(): void;
-  getAmount(): primitive_pb.Amount | undefined;
-  setAmount(value?: primitive_pb.Amount): void;
+  getAmount(): string;
+  setAmount(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TransferAsset.AsObject;
@@ -276,7 +268,7 @@ export namespace TransferAsset {
     destAccountId: string,
     assetId: string,
     description: string,
-    amount?: primitive_pb.Amount.AsObject,
+    amount: string,
   }
 }
 
@@ -403,16 +395,11 @@ export namespace RevokePermission {
 }
 
 export class SubtractAssetQuantity extends jspb.Message {
-  getAccountId(): string;
-  setAccountId(value: string): void;
-
   getAssetId(): string;
   setAssetId(value: string): void;
 
-  hasAmount(): boolean;
-  clearAmount(): void;
-  getAmount(): primitive_pb.Amount | undefined;
-  setAmount(value?: primitive_pb.Amount): void;
+  getAmount(): string;
+  setAmount(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SubtractAssetQuantity.AsObject;
@@ -426,9 +413,8 @@ export class SubtractAssetQuantity extends jspb.Message {
 
 export namespace SubtractAssetQuantity {
   export type AsObject = {
-    accountId: string,
     assetId: string,
-    amount?: primitive_pb.Amount.AsObject,
+    amount: string,
   }
 }
 

@@ -16,7 +16,6 @@
     "@types/google-protobuf": "^3.2.7",
     "ed25519.js": "^1.0.1",
     "google-protobuf": "^3.6.0",
-    "grpc-web-client": "^0.6.2",
-    "iroha-lib": "^0.1.7"
+    "grpc-web-client": "^0.6.2"
   }
 }

@@ -31,64 +31,6 @@ export namespace Signature {
   }
 }
 
-export class uint256 extends jspb.Message {
-  getFirst(): number;
-  setFirst(value: number): void;
-
-  getSecond(): number;
-  setSecond(value: number): void;
-
-  getThird(): number;
-  setThird(value: number): void;
-
-  getFourth(): number;
-  setFourth(value: number): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): uint256.AsObject;
-  static toObject(includeInstance: boolean, msg: uint256): uint256.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: uint256, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): uint256;
-  static deserializeBinaryFromReader(message: uint256, reader: jspb.BinaryReader): uint256;
-}
-
-export namespace uint256 {
-  export type AsObject = {
-    first: number,
-    second: number,
-    third: number,
-    fourth: number,
-  }
-}
-
-export class Amount extends jspb.Message {
-  hasValue(): boolean;
-  clearValue(): void;
-  getValue(): uint256 | undefined;
-  setValue(value?: uint256): void;
-
-  getPrecision(): number;
-  setPrecision(value: number): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): Amount.AsObject;
-  static toObject(includeInstance: boolean, msg: Amount): Amount.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Amount, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): Amount;
-  static deserializeBinaryFromReader(message: Amount, reader: jspb.BinaryReader): Amount;
-}
-
-export namespace Amount {
-  export type AsObject = {
-    value?: uint256.AsObject,
-    precision: number,
-  }
-}
-
 export class Peer extends jspb.Message {
   getAddress(): string;
   setAddress(value: string): void;
