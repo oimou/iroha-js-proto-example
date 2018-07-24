@@ -1,3 +1,5 @@
+// proto-files are generated using https://github.com/improbable-eng/grpc-web/blob/master/ts/docs/code-generation.md
+
 import { grpc } from "grpc-web-client";
 var ed25519 = require('ed25519.js')
 
