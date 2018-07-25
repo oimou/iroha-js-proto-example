@@ -66,6 +66,7 @@ CommandServiceClient.prototype.torii = function torii(requestMessage, metadata, 
     host: this.serviceHost,
     metadata: metadata,
     transport: this.options.transport,
+    debug: this.options.debug,
     onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
@@ -87,6 +88,7 @@ CommandServiceClient.prototype.listTorii = function listTorii(requestMessage, me
     host: this.serviceHost,
     metadata: metadata,
     transport: this.options.transport,
+    debug: this.options.debug,
     onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
@@ -108,6 +110,7 @@ CommandServiceClient.prototype.status = function status(requestMessage, metadata
     host: this.serviceHost,
     metadata: metadata,
     transport: this.options.transport,
+    debug: this.options.debug,
     onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
@@ -131,6 +134,7 @@ CommandServiceClient.prototype.statusStream = function statusStream(requestMessa
     host: this.serviceHost,
     metadata: metadata,
     transport: this.options.transport,
+    debug: this.options.debug,
     onMessage: function (responseMessage) {
       listeners.data.forEach(function (handler) {
         handler(responseMessage);
@@ -200,6 +204,7 @@ QueryServiceClient.prototype.find = function find(requestMessage, metadata, call
     host: this.serviceHost,
     metadata: metadata,
     transport: this.options.transport,
+    debug: this.options.debug,
     onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
@@ -223,6 +228,7 @@ QueryServiceClient.prototype.fetchCommits = function fetchCommits(requestMessage
     host: this.serviceHost,
     metadata: metadata,
     transport: this.options.transport,
+    debug: this.options.debug,
     onMessage: function (responseMessage) {
       listeners.data.forEach(function (handler) {
         handler(responseMessage);

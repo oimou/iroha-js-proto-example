@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "go": "tsc src/index.ts && node src/index.js"
+    "go": "tsc src/index.ts && node src/index.js",
+    "proto": "protoc --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --js_out=import_style=commonjs,binary:proto --ts_out=service=true:proto -I=${GOPATH}/src -I=/Users/yahatakeiji/work/try-iroha/iroha/shared_model/schema /Users/yahatakeiji/work/try-iroha/iroha/shared_model/schema/*.proto"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^10.5.3",
+    "ts-protoc-gen": "^0.7.6",
     "typescript": "^2.9.2"
   },
   "dependencies": {

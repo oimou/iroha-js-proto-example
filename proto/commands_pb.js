@@ -2378,7 +2378,7 @@ proto.iroha.protocol.CreateRole.deserializeBinaryFromReader = function(msg, read
       msg.setRoleName(value);
       break;
     case 2:
-      var value = /** @type {!Array.<!proto.iroha.protocol.RolePermission>} */ (reader.readPackedEnum());
+      var value = /** @type {!Array<!proto.iroha.protocol.RolePermission>} */ (reader.readPackedEnum());
       msg.setPermissionsList(value);
       break;
     default:
@@ -2444,14 +2444,14 @@ proto.iroha.protocol.CreateRole.prototype.setRoleName = function(value) {
 
 /**
  * repeated RolePermission permissions = 2;
- * @return {!Array.<!proto.iroha.protocol.RolePermission>}
+ * @return {!Array<!proto.iroha.protocol.RolePermission>}
  */
 proto.iroha.protocol.CreateRole.prototype.getPermissionsList = function() {
-  return /** @type {!Array.<!proto.iroha.protocol.RolePermission>} */ (jspb.Message.getRepeatedField(this, 2));
+  return /** @type {!Array<!proto.iroha.protocol.RolePermission>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.RolePermission>} value */
+/** @param {!Array<!proto.iroha.protocol.RolePermission>} value */
 proto.iroha.protocol.CreateRole.prototype.setPermissionsList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };

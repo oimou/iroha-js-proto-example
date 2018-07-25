@@ -544,15 +544,15 @@ proto.iroha.protocol.TxList.serializeBinaryToWriter = function(message, writer) 
 
 /**
  * repeated Transaction transactions = 1;
- * @return {!Array.<!proto.iroha.protocol.Transaction>}
+ * @return {!Array<!proto.iroha.protocol.Transaction>}
  */
 proto.iroha.protocol.TxList.prototype.getTransactionsList = function() {
-  return /** @type{!Array.<!proto.iroha.protocol.Transaction>} */ (
+  return /** @type{!Array<!proto.iroha.protocol.Transaction>} */ (
     jspb.Message.getRepeatedWrapperField(this, transaction_pb.Transaction, 1));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.Transaction>} value */
+/** @param {!Array<!proto.iroha.protocol.Transaction>} value */
 proto.iroha.protocol.TxList.prototype.setTransactionsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };

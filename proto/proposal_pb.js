@@ -191,15 +191,15 @@ proto.iroha.protocol.Proposal.prototype.setHeight = function(value) {
 
 /**
  * repeated Transaction transactions = 2;
- * @return {!Array.<!proto.iroha.protocol.Transaction>}
+ * @return {!Array<!proto.iroha.protocol.Transaction>}
  */
 proto.iroha.protocol.Proposal.prototype.getTransactionsList = function() {
-  return /** @type{!Array.<!proto.iroha.protocol.Transaction>} */ (
+  return /** @type{!Array<!proto.iroha.protocol.Transaction>} */ (
     jspb.Message.getRepeatedWrapperField(this, transaction_pb.Transaction, 2));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.Transaction>} value */
+/** @param {!Array<!proto.iroha.protocol.Transaction>} value */
 proto.iroha.protocol.Proposal.prototype.setTransactionsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };

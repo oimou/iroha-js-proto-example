@@ -955,15 +955,15 @@ proto.iroha.protocol.AccountAssetResponse.serializeBinaryToWriter = function(mes
 
 /**
  * repeated AccountAsset account_assets = 1;
- * @return {!Array.<!proto.iroha.protocol.AccountAsset>}
+ * @return {!Array<!proto.iroha.protocol.AccountAsset>}
  */
 proto.iroha.protocol.AccountAssetResponse.prototype.getAccountAssetsList = function() {
-  return /** @type{!Array.<!proto.iroha.protocol.AccountAsset>} */ (
+  return /** @type{!Array<!proto.iroha.protocol.AccountAsset>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.iroha.protocol.AccountAsset, 1));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.AccountAsset>} value */
+/** @param {!Array<!proto.iroha.protocol.AccountAsset>} value */
 proto.iroha.protocol.AccountAssetResponse.prototype.setAccountAssetsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
@@ -1306,14 +1306,14 @@ proto.iroha.protocol.AccountResponse.prototype.hasAccount = function() {
 
 /**
  * repeated string account_roles = 2;
- * @return {!Array.<string>}
+ * @return {!Array<string>}
  */
 proto.iroha.protocol.AccountResponse.prototype.getAccountRolesList = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.getRepeatedField(this, 2));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
 
-/** @param {!Array.<string>} value */
+/** @param {!Array<string>} value */
 proto.iroha.protocol.AccountResponse.prototype.setAccountRolesList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };
@@ -1628,14 +1628,14 @@ proto.iroha.protocol.RolesResponse.serializeBinaryToWriter = function(message, w
 
 /**
  * repeated string roles = 1;
- * @return {!Array.<string>}
+ * @return {!Array<string>}
  */
 proto.iroha.protocol.RolesResponse.prototype.getRolesList = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.getRepeatedField(this, 1));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
-/** @param {!Array.<string>} value */
+/** @param {!Array<string>} value */
 proto.iroha.protocol.RolesResponse.prototype.setRolesList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
@@ -1747,7 +1747,7 @@ proto.iroha.protocol.RolePermissionsResponse.deserializeBinaryFromReader = funct
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {!Array.<!proto.iroha.protocol.RolePermission>} */ (reader.readPackedEnum());
+      var value = /** @type {!Array<!proto.iroha.protocol.RolePermission>} */ (reader.readPackedEnum());
       msg.setPermissionsList(value);
       break;
     default:
@@ -1791,14 +1791,14 @@ proto.iroha.protocol.RolePermissionsResponse.serializeBinaryToWriter = function(
 
 /**
  * repeated RolePermission permissions = 1;
- * @return {!Array.<!proto.iroha.protocol.RolePermission>}
+ * @return {!Array<!proto.iroha.protocol.RolePermission>}
  */
 proto.iroha.protocol.RolePermissionsResponse.prototype.getPermissionsList = function() {
-  return /** @type {!Array.<!proto.iroha.protocol.RolePermission>} */ (jspb.Message.getRepeatedField(this, 1));
+  return /** @type {!Array<!proto.iroha.protocol.RolePermission>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.RolePermission>} value */
+/** @param {!Array<!proto.iroha.protocol.RolePermission>} value */
 proto.iroha.protocol.RolePermissionsResponse.prototype.setPermissionsList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
@@ -2148,10 +2148,10 @@ proto.iroha.protocol.SignatoriesResponse.prototype.getKeysList = function() {
 /**
  * repeated bytes keys = 1;
  * This is a type-conversion wrapper around `getKeysList()`
- * @return {!Array.<string>}
+ * @return {!Array<string>}
  */
 proto.iroha.protocol.SignatoriesResponse.prototype.getKeysList_asB64 = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.bytesListAsB64(
+  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getKeysList()));
 };
 
@@ -2161,10 +2161,10 @@ proto.iroha.protocol.SignatoriesResponse.prototype.getKeysList_asB64 = function(
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
  * This is a type-conversion wrapper around `getKeysList()`
- * @return {!Array.<!Uint8Array>}
+ * @return {!Array<!Uint8Array>}
  */
 proto.iroha.protocol.SignatoriesResponse.prototype.getKeysList_asU8 = function() {
-  return /** @type {!Array.<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getKeysList()));
 };
 
@@ -2328,15 +2328,15 @@ proto.iroha.protocol.TransactionsResponse.serializeBinaryToWriter = function(mes
 
 /**
  * repeated Transaction transactions = 1;
- * @return {!Array.<!proto.iroha.protocol.Transaction>}
+ * @return {!Array<!proto.iroha.protocol.Transaction>}
  */
 proto.iroha.protocol.TransactionsResponse.prototype.getTransactionsList = function() {
-  return /** @type{!Array.<!proto.iroha.protocol.Transaction>} */ (
+  return /** @type{!Array<!proto.iroha.protocol.Transaction>} */ (
     jspb.Message.getRepeatedWrapperField(this, transaction_pb.Transaction, 1));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.Transaction>} value */
+/** @param {!Array<!proto.iroha.protocol.Transaction>} value */
 proto.iroha.protocol.TransactionsResponse.prototype.setTransactionsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };

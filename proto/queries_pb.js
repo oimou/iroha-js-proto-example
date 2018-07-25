@@ -768,10 +768,10 @@ proto.iroha.protocol.GetTransactions.prototype.getTxHashesList = function() {
 /**
  * repeated bytes tx_hashes = 1;
  * This is a type-conversion wrapper around `getTxHashesList()`
- * @return {!Array.<string>}
+ * @return {!Array<string>}
  */
 proto.iroha.protocol.GetTransactions.prototype.getTxHashesList_asB64 = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.bytesListAsB64(
+  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getTxHashesList()));
 };
 
@@ -781,10 +781,10 @@ proto.iroha.protocol.GetTransactions.prototype.getTxHashesList_asB64 = function(
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
  * This is a type-conversion wrapper around `getTxHashesList()`
- * @return {!Array.<!Uint8Array>}
+ * @return {!Array<!Uint8Array>}
  */
 proto.iroha.protocol.GetTransactions.prototype.getTxHashesList_asU8 = function() {
-  return /** @type {!Array.<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getTxHashesList()));
 };
 

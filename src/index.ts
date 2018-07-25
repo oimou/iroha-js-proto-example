@@ -36,9 +36,10 @@ s.setSignature(sign)
 query.setSignature(s)
 
 const queryClient = new QueryServiceClient(
-  'http://localhost:8080',
+  'http://localhost:8081',
 )
 
 queryClient.find(query, (err, response) => {
+  console.error(err)
   console.log(JSON.stringify(response))
 })

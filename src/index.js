@@ -23,7 +23,8 @@ var s = new primitive_pb_1.Signature();
 s.setPubkey(Buffer.from(adminPub, 'hex'));
 s.setSignature(sign);
 query.setSignature(s);
-var queryClient = new endpoint_pb_service_1.QueryServiceClient('http://localhost:8080');
+var queryClient = new endpoint_pb_service_1.QueryServiceClient('http://localhost:8081');
 queryClient.find(query, function (err, response) {
+    console.error(err);
     console.log(JSON.stringify(response));
 });

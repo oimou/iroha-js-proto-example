@@ -353,15 +353,15 @@ proto.iroha.protocol.Block.Payload.serializeBinaryToWriter = function(message, w
 
 /**
  * repeated Transaction transactions = 1;
- * @return {!Array.<!proto.iroha.protocol.Transaction>}
+ * @return {!Array<!proto.iroha.protocol.Transaction>}
  */
 proto.iroha.protocol.Block.Payload.prototype.getTransactionsList = function() {
-  return /** @type{!Array.<!proto.iroha.protocol.Transaction>} */ (
+  return /** @type{!Array<!proto.iroha.protocol.Transaction>} */ (
     jspb.Message.getRepeatedWrapperField(this, transaction_pb.Transaction, 1));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.Transaction>} value */
+/** @param {!Array<!proto.iroha.protocol.Transaction>} value */
 proto.iroha.protocol.Block.Payload.prototype.setTransactionsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
@@ -498,15 +498,15 @@ proto.iroha.protocol.Block.prototype.hasPayload = function() {
 
 /**
  * repeated Signature signatures = 2;
- * @return {!Array.<!proto.iroha.protocol.Signature>}
+ * @return {!Array<!proto.iroha.protocol.Signature>}
  */
 proto.iroha.protocol.Block.prototype.getSignaturesList = function() {
-  return /** @type{!Array.<!proto.iroha.protocol.Signature>} */ (
+  return /** @type{!Array<!proto.iroha.protocol.Signature>} */ (
     jspb.Message.getRepeatedWrapperField(this, primitive_pb.Signature, 2));
 };
 
 
-/** @param {!Array.<!proto.iroha.protocol.Signature>} value */
+/** @param {!Array<!proto.iroha.protocol.Signature>} value */
 proto.iroha.protocol.Block.prototype.setSignaturesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
